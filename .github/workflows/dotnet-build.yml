@@ -1,0 +1,18 @@
+name: Meu Primeiro Workflow
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'  # Executa a cada hora
+
+jobs:
+  build:
+    name: Rodar verificação automática
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer checkout do código
+        uses: actions/checkout@v3
+
+      - name: Executar script personalizado
+        run: bash meu_script.sh
