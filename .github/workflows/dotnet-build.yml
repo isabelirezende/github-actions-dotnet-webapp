@@ -14,9 +14,9 @@ jobs:
       - name: Fazer checkout do código
         uses: actions/checkout@v3
 
-      - name: Dar permissão ao script
-        run: chmod +x meu_script.sh
+      - name: Build do projeto
+        run: dotnet build
 
-      - name: Executar script personalizado
-        run: ./meu_script.sh
+      - name: Compilar projeto
+        run: tsc  
         
